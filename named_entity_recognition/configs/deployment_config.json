@@ -3,12 +3,12 @@
         {
             "ENV_NAME": "dev",
             "TEST_FILE_PATH": "sample-request.json",
-            "ENDPOINT_NAME": "",
+            "ENDPOINT_NAME": "named-entity-flow",
             "ENDPOINT_DESC": "An online endpoint serving a flow for named entity flow",
             "DEPLOYMENT_DESC": "prompt flow deployment",
             "PRIOR_DEPLOYMENT_NAME": "",
             "PRIOR_DEPLOYMENT_TRAFFIC_ALLOCATION": "",
-            "CURRENT_DEPLOYMENT_NAME": "",
+            "CURRENT_DEPLOYMENT_NAME": "blue",
             "CURRENT_DEPLOYMENT_TRAFFIC_ALLOCATION": "100",
             "DEPLOYMENT_VM_SIZE": "Standard_F4s_v2",
             "DEPLOYMENT_BASE_IMAGE_NAME": "mcr.microsoft.com/azureml/promptflow/promptflow-runtime:latest",
@@ -47,13 +47,13 @@
             "ENV_NAME": "dev",
             "TEST_FILE_PATH": "sample-request.json",
             "CONNECTION_NAMES": ["aoai"],
-            "REGISTRY_NAME": "",
-            "REGISTRY_RG_NAME": "",
-            "APP_PLAN_NAME": "",
-            "WEB_APP_NAME": "",
-            "WEB_APP_RG_NAME": "",
+            "REGISTRY_NAME": "promptflowdknacr",
+            "REGISTRY_RG_NAME": "openai-dkn-rg",
+            "APP_PLAN_NAME": "appplandkndev",
+            "WEB_APP_NAME": "webappdkndev",
+            "WEB_APP_RG_NAME": "apprgdkndev",
             "WEB_APP_SKU": "B3",
-            "USER_MANAGED_ID": ""
+            "USER_MANAGED_ID": "usermngiddkn"
             
         }
     ]
