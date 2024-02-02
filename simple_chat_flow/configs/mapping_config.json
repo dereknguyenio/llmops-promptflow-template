@@ -4,7 +4,7 @@
         "question": "${data.question}"
     },
     "evaluation": {
-        "question": "${data.question}",
+        "question": "${run.input.question}",
         "answer": "${run.outputs.answer}"
     }
 }

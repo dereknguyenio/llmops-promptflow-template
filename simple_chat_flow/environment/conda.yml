@@ -1,4 +1,4 @@
-name: named-entity-env
+name: simple-chat-flow-env
 channels:
   - conda-forge
 dependencies:

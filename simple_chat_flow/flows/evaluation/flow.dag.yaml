@@ -1,11 +1,15 @@
+environment:
+  python_requirements_txt: requirements.txt
 inputs:
   question:
     type: string
-    default: What feeds all the fixtures in low voltage tracks instead of each light having a line-to-low voltage transformer?
+    default: What feeds all the fixtures in low voltage tracks instead of each light
+      having a line-to-low voltage transformer?
     is_chat_input: false
   answer:
     type: string
-    default: The main transformer is the object that feeds all the fixtures in low voltage tracks.
+    default: The main transformer is the object that feeds all the fixtures in low
+      voltage tracks.
     is_chat_input: false
 outputs:
   gpt_coherence:
@@ -20,15 +24,15 @@ nodes:
     type: code
     path: coherence_score.jinja2
   inputs:
-    question: "${inputs.question}"
-    answer: "${inputs.answer}"
-    max_tokens: "256"
-    deployment_name: "gpt-4-turbo"
-    temperature: "0.0"
-    model: "gpt-4"
-  api: chat
+    question: ${inputs.question}
+    answer: ${inputs.answer}
+    max_tokens: 256
+    deployment_name: gpt-4-turbo
+    temperature: 0
+    model: gpt-4
   provider: AzureOpenAI
   connection: open_ai_connection
+  api: chat
   module: promptflow.tools.aoai
   aggregation: false
 - name: concat_scores
@@ -37,7 +41,7 @@ nodes:
     type: code
     path: concat_scores.py
   inputs:
-    coherence_score: "${coherence_score.output}"
+    coherence_score: ${coherence_score.output}
   aggregation: false
 - name: aggregate_variants_results
   type: python
@@ -45,7 +49,5 @@ nodes:
     type: code
     path: aggregate_variants_results.py
   inputs:
-    results: "${concat_scores.output}"
+    results: ${concat_scores.output}
   aggregation: true
-environment:
-  python_requirements_txt: requirements.txt
