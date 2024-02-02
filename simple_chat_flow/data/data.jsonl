@@ -1,0 +1,4 @@
+{"chat_history": [{"inputs": {"question": "Welcome to our chat service. How can I assist you today?"}, "outputs": {"answer": "What are your operating hours?"}}], "question": "Do you offer support on weekends?"}
+{"chat_history": [{"inputs": {"question": "Do you offer support on weekends?"}, "outputs": {"answer": "We offer limited support on weekends, from 10 AM to 3 PM."}}], "question": "How can I update my account information?"}
+{"chat_history": [{"inputs": {"question": "How can I update my account information?"}, "outputs": {"answer": "You can update your account information through our website or by contacting customer service."}}], "question": "Where are you located?"}
+{"chat_history": [{"inputs": {"question": "Where are you located?"}, "outputs": {"answer": "Our main office is located in downtown Seattle."}}], "question": "What services do you provide?"}

@@ -1,0 +1,10 @@
+{
+    "experiment": {
+        "chat_history": "${data.chat_history}",
+        "question": "${data.question}"
+    },
+    "evaluation": {
+        "question": "${run.input.question}",
+        "answer": "${run.outputs.answer}"
+    }
+}
